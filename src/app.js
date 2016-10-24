@@ -90,6 +90,17 @@
       'concepts/forms-validation/messages-state',
       'concepts/forms-validation/messages-errors',
 
+      'concepts/routing/title',
+      'concepts/routing/features',
+      'concepts/routing/route-config',
+      'concepts/routing/route-config-fallback',
+      'concepts/routing/setup-provider',
+      'concepts/routing/router-outlet',
+      'concepts/routing/route-config-params',
+      'concepts/routing/route-params-1',
+      'concepts/routing/route-params-2',
+      'concepts/routing/router-link',
+
       'testing/title',
       'testing/spec',
       'testing/inject',

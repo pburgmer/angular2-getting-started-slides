@@ -1,0 +1,25 @@
+<div w11k-slide-master="regular">
+  <div w11k-slide-part-source="header">
+    Komponenten im DOM
+  </div>
+
+  <div w11k-slide-part-source="content">
+    <ul class="simple">
+      <li>Wo wird Komponente der Route im DOM platziert?</li>
+      <li>Direktive <code>router-outlet</code> gibt Stelle zum Einfügen der Komponente vor</li>
+      <li>Router fügt dort die Komponenten, der aktuellen Route ein</li>
+    </ul>
+    <!--@formatter:off-->
+<pre w11k-pretty-print lang="ts">
+@Component({
+  selector: "app-root",
+  template: `
+    &lt;h1&gt;Training App&lt;/h1&gt;
+    &lt;router-outlet&gt;&lt;/router-outlet&gt;
+  `
+})
+export class AppComponent {}
+</pre>
+    <!--@formatter:on-->
+  </div>
+</div>

@@ -1,0 +1,33 @@
+<div w11k-slide-master="regular">
+  <div w11k-slide-part-source="header">
+    Routen Parameter auslesen
+  </div>
+
+  <div w11k-slide-part-source="content">
+    <ul class="simple">
+      <li><code>ActivatedRoute</code> aus <code>@angular/router</code> injezierbar
+        <ul>
+          <li><code>params</code> Feld mit Observable für Parameter</li>
+          <li>Hintergrund: Komponenten-Instanz wird wiederverwendet</li>
+        </ul>
+      </li>
+    </ul>
+    <!--@formatter:off-->
+<pre w11k-pretty-print lang="ts">
+import { ActivatedRoute } from "@angular/router";
+export class TrainingDetailsComponent implements OnInit, OnDestroy {
+  private subscription:   Subscription;
+
+  constructor(private route: ActivatedRoute) {}
+
+  ngOnInit() {
+    this.subscription = this.route.params
+      .subscribe(params => console.log(params['id']));
+  }
+
+  ngOnDestroy() { this.subscription.unsubscribe(); }
+}
+</pre>
+    <!--@formatter:on-->
+  </div>
+</div>

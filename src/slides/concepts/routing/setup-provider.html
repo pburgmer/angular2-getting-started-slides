@@ -1,0 +1,32 @@
+<div w11k-slide-master="regular">
+  <div w11k-slide-part-source="header">
+    Router-Provider
+  </div>
+
+  <div w11k-slide-part-source="content">
+    <ul class="simple">
+      <li>Was passiert mit Routen-Konfiguration?</li>
+      <li>Wird verwendet um Provider für <code>Router</code> Service zu erzeugen</li>
+      <li>Provider wird von <code>RouterModule</code> bereitgestellt
+        <ul>
+          <li><code>RouterModule</code> muss in <code>AppModule</code> importiert werden</li>
+          <li>Routing unterstützt Lazy-Loading</li>
+          <li>Nicht alle Provider dürfen beim Nachladen registriert werden</li>
+          <li>Unterscheidung <code>forRoot</code> und <code>forChild</code></li>
+        </ul>
+      </li>
+    </ul>
+
+    <!--@formatter:off-->
+<pre w11k-pretty-print lang="ts">
+import { RouterModule } from '@angular/router';
+import { routes } from './app.routes';
+
+@NgModule({ imports: [
+  RouterModule.forRoot(routes)
+]})
+export class AppModule { }
+</pre>
+    <!--@formatter:on-->
+  </div>
+</div>

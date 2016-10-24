@@ -23,10 +23,3 @@ Die Präsentation ist als Web-Anwendung mit [AngularJS](https://angularjs.org/) 
 npm install
 npm run dist
 ```
-
-# Notizen
-
-* Konzepte
-  * Routing
-    * verwendet RX
-  * Pipes

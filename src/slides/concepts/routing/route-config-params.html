@@ -1,0 +1,37 @@
+<div w11k-slide-master="regular">
+  <div w11k-slide-part-source="header">
+    Konfiguration mit Parametern
+  </div>
+
+  <div w11k-slide-part-source="content">
+    <ul class="simple">
+      <li>Problem:
+        <ul>
+          <li>Routen Konfiguration zur Entwicklungszeit, nicht zur Laufzeit</li>
+          <li>Keine statische Route pro Datensatz möglich</li>
+        </ul>
+      </li>
+      <li>Lösung:
+        <ul>
+          <li>Dynamische Routen mit Parametern</li>
+          <li>Routen Konfiguration kann in <code>path</code> Variablen enthalten</li>
+        </ul>
+      </li>
+      <li>Rest-Parameter vs URL-Parameter (?param=value)
+        <ul>
+          <li>Parameter in Route für Pflichtparameter</li>
+          <li>URL-Parameter für optionale Parameter</li>
+        </ul>
+      </li>
+
+    </ul>
+    <!--@formatter:off-->
+<pre w11k-pretty-print lang="ts">
+{
+  path: 'artist/:id',
+  component: TrainingDetailsComponent
+}
+</pre>
+    <!--@formatter:on-->
+  </div>
+</div>

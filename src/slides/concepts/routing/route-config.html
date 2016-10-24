@@ -1,0 +1,32 @@
+<div w11k-slide-master="regular">
+  <div w11k-slide-part-source="header">
+    Routen
+  </div>
+
+  <div w11k-slide-part-source="content">
+    <ul class="simple">
+      <li>Route
+        <ul>
+          <li>Relativer <code>path</code> (ohne führenden Slash)</li>
+          <li><code>component</code> für die Anzeige</li>
+        </ul>
+        <!--@formatter:off-->
+<pre w11k-pretty-print lang="ts">
+import { Routes } from '@angular/router';
+
+export const routes: Routes = [
+  { path: 'training', component: TrainingListComponent }
+];
+</pre>
+        <!--@formatter:on-->
+      </li>
+      <li>Ablauf
+        <ul>
+          <li>URL des Browsers wird überprüft / auf Änderungen überwacht</li>
+          <li>Passende Route wird gesucht</li>
+          <li>Komponente wird angezeigt</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>

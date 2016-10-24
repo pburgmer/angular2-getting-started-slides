@@ -1,0 +1,33 @@
+<div w11k-slide-master="regular">
+  <div w11k-slide-part-source="header">
+    Default Route
+  </div>
+
+  <div w11k-slide-part-source="content">
+    <ul class="simple">
+      <li>Was passiert wenn keine gültige Route aufgerufen wird?
+        <ul>
+          <li>Einstieg über URL ohne Route</li>
+          <li>ungültige Route</li>
+        </ul>
+      </li>
+      <li>Fallback konfigurierbar
+        <ul>
+          <li><code>path</code> mit <code>**</code></li>
+          <li><code>redirectTo</code> Umleitung auf einen anderen Pfad</li>
+          <li>Achtung: Reihenfolge der Routen spielt eine Rolle, Fallback als letzte</li>
+        </ul>
+      </li>
+    </ul>
+    <!--@formatter:off-->
+<pre w11k-pretty-print lang="ts">
+import { Routes } from '@angular/router';
+
+export const routes: Routes = [
+  { path: 'training', component: TrainingListComponent },
+  { path: '**', redirectTo: '/training' }
+];
+</pre>
+    <!--@formatter:on-->
+  </div>
+</div>

@@ -1,0 +1,35 @@
+<div w11k-slide-master="regular">
+  <div w11k-slide-part-source="header">
+    Navigation im Template
+  </div>
+
+  <div w11k-slide-part-source="content">
+    <ul class="simple">
+      <li>Direktive <code>routerLink</code> an a-Tag (erzeugt href, berücksichtigt LocationStrategy)
+        <ul>
+          <li><code>RouterModule</code> muss eingebunden werden damit verfügbar</li>
+        </ul>
+      </li>
+      <li>Wert: Router-Link
+        <ul>
+          <li>Array (für hierarchische Navigation)</li>
+          <li>Namen und Parameter</li>
+        </ul>
+      </li>
+      <li>Absolute und relative Links
+        <ul>
+          <li>Absolute Links mit führendem Slash</li>
+          <li>Zur aktuellen Route relative Links ohne führenden Slash</li>
+        </ul>
+      </li>
+    </ul>
+
+    <!--@formatter:off-->
+<pre w11k-pretty-print lang="html">
+&lt;a [routerLink]=&quot;['/training']&quot;&gt;Trainings&lt;/a&gt;
+&lt;a [routerLink]=&quot;['/training', training.id]&quot;&gt;Some Training&lt;/a&gt;
+&lt;a [routerLink]=&quot;[otherTraining.id]&quot;&gt;See also&lt;/a&gt;
+</pre>
+    <!--@formatter:on-->
+  </div>
+</div>

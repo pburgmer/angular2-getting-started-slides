@@ -1,0 +1,34 @@
+<div w11k-slide-master="regular">
+  <div w11k-slide-part-source="header">
+    Routen Parameter auslesen
+  </div>
+
+  <div w11k-slide-part-source="content">
+    <ul class="simple">
+      <li><code>Observable#map</code>: Wert auf anderer Wert</li>
+      <li>Was ist, wenn map ein <code>Observable&lt;AndererWert&gt;</code> zurück gibt?</li>
+      <li>Würde <code>Observalble&lt;Observable&lt;AndererWert&gt;&gt;</code> ergeben</li>
+      <li><code>Observable#switchMap</code>
+        <ul>
+          <li>Map + Switch</li>
+          <li>Map gibt Observable zurück</li>
+          <li>Switch: Nur zuletzt von map zurückgegebenes Observable weiter verwenden</li>
+        </ul>
+      </li>
+    </ul>
+    <!--@formatter:off-->
+<pre w11k-pretty-print lang="ts">
+export class TrainingDetailsComponent implements OnInit {
+  public training: Training;
+
+  ngOnInit() {
+    this.subscription = this.route.params
+      .map(params => +params['id'])
+      .switchMap(id => this.trainingService.getById(id))
+      .subscribe(training => this.training = training);
+  }
+}
+</pre>
+    <!--@formatter:on-->
+  </div>
+</div>
