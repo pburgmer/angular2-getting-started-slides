@@ -1,0 +1,29 @@
+<div w11k-slide-master="regular">
+  <span w11k-slide-part-source="header">
+    Fehler-Meldungen
+  </span>
+
+  <div w11k-slide-part-source="content">
+    <ul class="simple">
+      <li>Zugriff auf Feld und Zustand
+        <ul>
+          <li>Erlaubt Dynamik an anderen Elementen</li>
+        </ul>
+      </li>
+    </ul>
+
+    <!--@formatter:off-->
+<pre w11k-pretty-print lang="html">
+&lt;form [formGroup]="form"&gt;
+  &lt;div class="form-group"
+       [class.has-error]=&quot;form.controls.email.dirty &amp;&amp; !form.controls.email.valid&quot;
+       [class.has-warning]=&quot;form.controls.email.pristine &amp;&amp; !form.controls.email.valid&quot;&gt;
+    &lt;input type=&quot;email&quot; class=&quot;form-control&quot; formControlName=&quot;email&quot;&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
+</pre>
+    <!--@formatter:on-->
+
+
+  </div>
+</div>

@@ -1,0 +1,37 @@
+<div w11k-slide-master="regular">
+  <span w11k-slide-part-source="header">
+    Fehler-Meldungen
+  </span>
+
+  <div w11k-slide-part-source="content">
+    <ul class="simple">
+      <li>Detailierte Meldungen pro Validator möglich
+        <ul>
+          <li><code>errors</code>-Map mit Informationen pro Validator</li>
+        </ul>
+      </li>
+      <li>Code wird schnell unübersichtlich
+        <ul>
+          <li>Bibliothek mit Komponenten für Fehlermeldungen verwenden</li>
+        </ul>
+      </li>
+    </ul>
+
+    <!--@formatter:off-->
+<pre w11k-pretty-print lang="html">
+&lt;form [formGroup]=&quot;form&quot;&gt;
+  &lt;input type=&quot;password&quot; formControlName=&quot;password&quot;&gt;
+  &lt;div [hidden]=&quot;!form.controls.password.dirty&quot;&gt;
+    &lt;div [hidden]=&quot;!form.controls.password.errors?.required&quot;&gt;
+      Password is required
+    &lt;/div&gt;
+    &lt;div [hidden]=&quot;!form.controls.password.errors?.complex&quot;&gt;
+      Password is not complex enough
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
+</pre>
+    <!--@formatter:on-->
+
+  </div>
+</div>

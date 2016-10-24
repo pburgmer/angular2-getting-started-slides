@@ -1,0 +1,29 @@
+<div w11k-slide-master="regular">
+  <span w11k-slide-part-source="header">
+    Fehler-Meldungen
+  </span>
+
+  <div w11k-slide-part-source="content">
+    <ul class="simple">
+      <li>Styling über automatisch gesetzte Klassen
+        <ul>
+          <li>Angular setzt CSS-Klassen an Formular und Feldern</li>
+          <li><code>ng-valid</code>, <code>ng-invalid</code>, <code>ng-pristine</code>, <code>ng-dirty</code></li>
+          <li>Styling über Klasse am Feld nur begrenzt möglich (CSS-Selektoren nur abwärts)</li>
+        </ul>
+      </li>
+    </ul>
+
+    <!--@formatter:off-->
+<pre w11k-pretty-print lang="html">
+&lt;style type=&quot;text/css&quot;&gt;
+  input.my-input.ng-invalid {
+    border: 1px solid red;
+  }
+&lt;/style&gt;
+&lt;input type=&quot;email&quot; class=&quot;my-input&quot; ngControl=&quot;email&quot;&gt;
+</pre>
+    <!--@formatter:on-->
+
+  </div>
+</div>

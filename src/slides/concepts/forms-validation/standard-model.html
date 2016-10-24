@@ -1,0 +1,30 @@
+<div w11k-slide-master="regular">
+  <span w11k-slide-part-source="header">
+    Validierung
+  </span>
+
+  <div w11k-slide-part-source="content">
+    <ul class="simple">
+      <li>Verwendung
+        <!--@formatter:off-->
+<pre w11k-pretty-print lang="ts">
+import {FormControl, FormGroup, Validators} from "@angular/forms";
+
+class PersonForm implements OnInit {
+  ngOnInit() {
+    this.form = new FormGroup({
+      name: new FormControl('', Validators.required)),
+      city: new FormControl('', Validators.maxLength(10)),
+      zip: new FormControl('', Validators.pattern('[0-9]{5}')),
+      street: new FormControl('', [
+        Validators.required, Validators.minLength(3)
+      ])
+    });
+  }
+}
+</pre>
+        <!--@formatter:on-->
+      </li>
+    </ul>
+  </div>
+</div>

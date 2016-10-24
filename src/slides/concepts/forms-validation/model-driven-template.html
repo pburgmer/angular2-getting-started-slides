@@ -1,0 +1,39 @@
+<div w11k-slide-master="regular">
+  <div w11k-slide-part-source="header">
+    Model-Driven im Template
+  </div>
+
+  <div w11k-slide-part-source="content">
+    <ul class="simple">
+      <li><code>formGroup</code> bindet Formular oder Gruppe
+        <ul>
+          <li><code>form</code> auf oberster Ebene</li>
+          <li>z.B. <code>div</code> oder <code>fieldset</code> innerhalb eines <code>form</code></li>
+        </ul>
+      </li>
+      <li><code>formControl</code> bindet Feld
+        <ul>
+          <li>Expression für Feld-Referenz</li>
+        </ul>
+      </li>
+      <li><code>formControlName</code> bindet Feld aus nächst höherer Gruppe
+        <ul>
+          <li>String mit Feld-Name in nächst höherer Gruppe</li>
+        </ul>
+      </li>
+    </ul>
+
+    <!--@formatter:off-->
+<pre w11k-pretty-print lang="html">
+&lt;form [formGroup]=&quot;form&quot; (ngSubmit)=&quot;onSubmit()&quot;&gt;
+  &lt;label&gt;Name:
+    &lt;input type=&quot;text&quot; [formControl]=&quot;form.controls.name&quot;&gt;
+  &lt;/label&gt;
+  &lt;label&gt;Date:
+    &lt;input type=&quot;date&quot; formControlName=&quot;date&quot;&gt;
+  &lt;/label&gt;
+&lt;/form&gt;
+</pre>
+    <!--@formatter:on-->
+  </div>
+</div>

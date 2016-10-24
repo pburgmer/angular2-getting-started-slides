@@ -1,0 +1,34 @@
+<div w11k-slide-master="regular">
+  <div w11k-slide-part-source="header">
+    Model-Driven im Controller
+  </div>
+
+  <div w11k-slide-part-source="content">
+    <ul class="simple">
+      <li>Formular / Top-Level-Group als Member-Variable in Controller
+        <ul>
+          <li>Zugriff in Controller und Template möglich</li>
+        </ul>
+      </li>
+      <li>Initialisierung in <i>OnInit-Hook</i>, vorher kein Zugriff auf Daten (<code>@Input()</code>) möglich</li>
+    </ul>
+
+    <!--@formatter:off-->
+<pre w11k-pretty-print lang="ts">
+import { FormGroup, FormControl } from "@angular/forms";
+@Component({ })
+export class ReleaseFormComponent implements OnInit {
+  public form: FormGroup;
+  @Input() release: Release;
+
+  ngOnInit() {
+    this.form = new FormGroup({
+      name: new FormControl(this.release.name),
+      date: new FormControl(this.release.date)
+    });
+  }
+}
+</pre>
+    <!--@formatter:on-->
+  </div>
+</div>

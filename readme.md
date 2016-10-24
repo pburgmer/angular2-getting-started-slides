@@ -29,5 +29,4 @@ npm run dist
 * Konzepte
   * Routing
     * verwendet RX
-  * Formulare & Validierung
   * Pipes

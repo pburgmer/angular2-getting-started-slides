@@ -79,6 +79,17 @@
       'concepts/services-di/configuration-2',
       'concepts/services-di/hierarchical-injectors',
 
+      'concepts/forms-validation/title',
+      'concepts/forms-validation/model-driven',
+      'concepts/forms-validation/model-driven-controller',
+      'concepts/forms-validation/model-driven-template',
+      'concepts/forms-validation/standard',
+      'concepts/forms-validation/standard-model',
+      'concepts/forms-validation/state',
+      'concepts/forms-validation/messages-classes',
+      'concepts/forms-validation/messages-state',
+      'concepts/forms-validation/messages-errors',
+
       'testing/title',
       'testing/spec',
       'testing/inject',
