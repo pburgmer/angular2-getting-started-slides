@@ -1,0 +1,30 @@
+<div w11k-slide-master="regular">
+  <span w11k-slide-part-source="header">
+    Angular - inject
+  </span>
+
+  <div w11k-slide-part-source="content">
+    <ul class="simple">
+      <li>Angular stellt <code>inject</code> Funktion bereit (<code>@angular/core/testing</code>)</li>
+      <li>Wrapped an <code>it</code> übergebene Test-Funktion
+        <ul>
+          <li>suboptimale API, TypeScript Typen werden nicht genutzt</li>
+          <li>1. Parameter: Was soll injiziert werden</li>
+          <li>2. Parameter: Funktion, die mit DI aufgerufen wird</li>
+        </ul>
+      </li>
+    </ul>
+
+    <!--@formatter:off-->
+    <pre w11k-pretty-print lang="ts">
+it(
+  'should ...',
+  inject([Service], (service: Service) => {
+    expect(service).toBeDefined();
+  })
+);
+</pre>
+    <!--@formatter:on-->
+  </div>
+
+</div>

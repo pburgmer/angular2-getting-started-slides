@@ -79,6 +79,18 @@
       'concepts/services-di/configuration-2',
       'concepts/services-di/hierarchical-injectors',
 
+      'testing/title',
+      'testing/spec',
+      'testing/inject',
+      'testing/providers',
+      'testing/async',
+      'testing/http',
+      'testing/http-mockbackend-1',
+      'testing/http-mockbackend-2',
+      'testing/component',
+      'testing/test-component-builder-1',
+      'testing/test-component-builder-2',
+
       'concepts/overview',
 
       'conclusion',

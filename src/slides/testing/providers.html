@@ -1,0 +1,34 @@
+<div w11k-slide-master="regular">
+  <span w11k-slide-part-source="header">
+    Angular - Provider
+  </span>
+
+  <div w11k-slide-part-source="content">
+    <ul class="simple">
+      <li>Provider werden in <code>beforeEach</code> Funktion konfiguriert</li>
+      <li>Angular stellt <code>TestBed</code> Klasse zur Verfügung
+        <ul>
+          <li><code>configureTestingModule</code> um Module mit Provider für Test zu erzeugen</li>
+        </ul>
+      </li>
+      <li>Module und  somit auch Injector wird für jeden Test neu erzeugt</li>
+    </ul>
+
+    <!--@formatter:off-->
+    <pre w11k-pretty-print lang="ts">
+beforeEach(() => {
+  this.mockedDependency = {
+    aMethod: jasmine.createSpy('aMethod').and.callFake(() => {})
+  };
+  TestBed.configureTestingModule({
+    providers: [
+     ServiceWithDependency,
+     { provide: Dependency, useValue: this.mockedDependency }
+    ]
+  });
+});
+</pre>
+    <!--@formatter:on-->
+  </div>
+
+</div>

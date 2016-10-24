@@ -1,0 +1,24 @@
+<div w11k-slide-master="regular">
+  <span w11k-slide-part-source="header">
+    TestBed
+  </span>
+
+  <div w11k-slide-part-source="content">
+    <!--@formatter:off-->
+<pre w11k-pretty-print lang="ts">
+it('should render the release name', async(() => {
+  let fixture = TestBed.createComponent(ReleaseCard);
+
+  let component = fixture.componentInstance;
+  let element = fixture.nativeElement;
+
+  component.release = { name: 'Amélie' };
+  fixture.detectChanges();
+
+  expect(element.querySelector('h3').innerText).toBe('Amélie');
+});
+</pre>
+    <!--@formatter:on-->
+  </div>
+
+</div>

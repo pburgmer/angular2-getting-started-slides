@@ -1,0 +1,34 @@
+<div w11k-slide-master="regular">
+  <span w11k-slide-part-source="header">
+    TestBed
+  </span>
+
+  <div w11k-slide-part-source="content">
+    <ul class="simple">
+      <li><code>TestBed</code> hilft bei Instanziierung</li>
+      <li>Komponente über <code>createComponent</code> erzeugen lassen
+        <!--@formatter:off-->
+        <pre w11k-pretty-print lang="ts">
+it('should render the release name', async(() => {
+  let fixture = TestBed.createComponent(ReleaseCard);
+});
+</pre>
+        <!--@formatter:on-->
+      </li>
+      <li>Liefert <code>Fixture</code>
+        <!--@formatter:off-->
+        <pre w11k-pretty-print lang="ts">
+abstract class ComponentFixture {
+  debugElement;       // test helper
+  componentInstance;  // access properties and methods
+  nativeElement;      // access DOM
+  detectChanges();    // trigger component change detection
+}
+</pre>
+        <!--@formatter:on-->
+      </li>
+    </ul>
+
+  </div>
+
+</div>

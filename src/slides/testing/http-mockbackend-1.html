@@ -1,0 +1,44 @@
+<div w11k-slide-master="regular">
+  <span w11k-slide-part-source="header">
+    Http MockBackend
+  </span>
+
+  <div w11k-slide-part-source="content">
+    <ul class="simple">
+      <li><code>Http</code> erstellt Verbindungen nicht selbst
+        <ul>
+          <li>Abstrakte Klasse <code>ConnectionBackend</code></li>
+          <li>In <code>HTTP_PROVIDERS</code> Provider mit <code>useClass: XHRBackend</code></li>
+        </ul>
+      </li>
+      <li>Für Test Provider überschreiben
+        <ul>
+          <li>Provider <code>MockBackend</code> -&gt; MockBackend injizierbar (extra API für Test)</li>
+          <li><code>ConnectionBackend</code> mit <code>useExisting: MockBackend</code> -&gt; gleiche Instanz</li>
+        </ul>
+      </li>
+    </ul>
+
+    <!--@formatter:off-->
+    <pre w11k-pretty-print lang="ts">
+import { addProviders, async, inject } from '@angular/core/testing';
+import { XHRBackend, ConnectionBackend, HttpModule } from '@angular/http';
+import { MockBackend } from '@angular/http/testing';
+
+describe('Service: Training', () => {
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      imports: [ HttpModule ],
+      providers: [
+        MockBackend,
+        // { provide: ConnectionBackend, useExisting: MockBackend } not working!
+        { provide: XHRBackend, useExisting: MockBackend } // working!
+      ]
+    });
+  });
+});
+</pre>
+    <!--@formatter:on-->
+  </div>
+
+</div>

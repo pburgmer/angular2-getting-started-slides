@@ -1,0 +1,29 @@
+<div w11k-slide-master="regular">
+  <span w11k-slide-part-source="header">
+    Angular - async
+  </span>
+
+  <div w11k-slide-part-source="content">
+    <ul class="simple">
+      <li>Umgang mit Jasmine-Done-Funktion umständlich &amp; fehleranfällig</li>
+      <li>Angular verwendet intern <i>zone.js</i> -&gt; weis was wann ausgeführt wird</li>
+      <li><code>async</code> Funktion aus <code>@angular/core/testing</code>
+        <ul>
+          <li>Wrapped an <code>it</code> übergebene Test-Funktion (inklusive <code>inject</code>)</li>
+          <li>Ruft <code>done</code> automatisch auf wenn alle asynchronen Aufrufe abgearbeitet</li>
+        </ul>
+      </li>
+    </ul>
+
+    <!--@formatter:off-->
+    <pre w11k-pretty-print lang="ts">
+it('should call promise handler', async(function () {
+  someAsyncCall().then(function (result) {
+    expect(result).toBeDefined();
+  }));
+});
+</pre>
+    <!--@formatter:on-->
+  </div>
+
+</div>

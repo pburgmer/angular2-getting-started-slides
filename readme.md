@@ -31,6 +31,3 @@ npm run dist
     * verwendet RX
   * Formulare & Validierung
   * Pipes
-  * Testen
-    * grundsätzlich gleiche Tools wie bei ng1: Karma, Jasmine
-    * TestBed
