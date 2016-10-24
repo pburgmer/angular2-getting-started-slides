@@ -23,3 +23,58 @@ Die Präsentation ist als Web-Anwendung mit [AngularJS](https://angularjs.org/) 
 npm install
 npm run dist
 ```
+
+# Notizen
+
+* Warum
+  * Schwächen v1
+    * Performance
+    * Kapselung
+  * Neuerungen v2
+    * Alternative Renderer, NativeScript statt DOM
+    * Server-Side-Rendering
+  * Vergleich React
+    * Framework statt Bibliothek für View
+* Voraussetzungen
+  * TypeScript / ES6
+    * Module
+    * Klassen
+    * Typen
+    * Decorator
+  * Build-System
+    * Angular CLI (WebPack)
+  * Reactive Programming
+    * AngularJS 1: früh Promises verwendet
+    * Problem mit Promises
+    * Angular 2: RxJS
+* Konzepte
+  * Komponenten
+    * Grundlagen
+    * Data-Binding
+    * Inputs, Outputs, Events, Property-Bindings, Class- & Style-Bindings
+    * Style Encapsulation
+    * Smart vs Dump
+  * Module
+    * Gleicher Fehler noch mal?
+    * ES6 vs NG
+    * NgModule Aufbau (Echte Kapselung)
+  * Services + DI
+    * Service: Grundsätzliches Konzept
+    * DI: Grundsätzliches Konzept
+    * Provider an Modulen
+    * Hierarchischer Injektor
+    * Http als Beispiel
+      * Observable statt Promise
+  * Routing
+    * verwendet RX
+  * Formulare & Validierung
+  * Pipes
+  * Testen
+    * grundsätzlich gleiche Tools wie bei ng1: Karma, Jasmine
+    * TestBed
+* Fazit
+  * steile Lernkurve
+  * runde Sache
+  * von Community schnell, vielleicht zu schnell aufgegriffen
+  * bereits viele Bibliotheken
+  * Nach Einarbeitung: macht Spaß, fühlt sich gut an
