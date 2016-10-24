@@ -9,6 +9,15 @@
       'about-me',
       'about-us',
 
+      'overview',
+
+      'intro/problems-v1',
+      'intro/whats-better',
+      'intro/whats-new',
+      'intro/compare',
+
+      'conclusion',
+
       'end'
     ];
 

@@ -26,15 +26,6 @@ npm run dist
 
 # Notizen
 
-* Warum
-  * Schwächen v1
-    * Performance
-    * Kapselung
-  * Neuerungen v2
-    * Alternative Renderer, NativeScript statt DOM
-    * Server-Side-Rendering
-  * Vergleich React
-    * Framework statt Bibliothek für View
 * Voraussetzungen
   * TypeScript / ES6
     * Module
@@ -72,9 +63,3 @@ npm run dist
   * Testen
     * grundsätzlich gleiche Tools wie bei ng1: Karma, Jasmine
     * TestBed
-* Fazit
-  * steile Lernkurve
-  * runde Sache
-  * von Community schnell, vielleicht zu schnell aufgegriffen
-  * bereits viele Bibliotheken
-  * Nach Einarbeitung: macht Spaß, fühlt sich gut an
