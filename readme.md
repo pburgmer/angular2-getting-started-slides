@@ -26,18 +26,6 @@ npm run dist
 
 # Notizen
 
-* Voraussetzungen
-  * TypeScript / ES6
-    * Module
-    * Klassen
-    * Typen
-    * Decorator
-  * Build-System
-    * Angular CLI (WebPack)
-  * Reactive Programming
-    * AngularJS 1: früh Promises verwendet
-    * Problem mit Promises
-    * Angular 2: RxJS
 * Konzepte
   * Komponenten
     * Grundlagen
