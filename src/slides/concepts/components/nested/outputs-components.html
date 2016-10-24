@@ -20,13 +20,13 @@
 <pre w11k-pretty-print lang="ts">
 import {Component, Input, Output, EventEmitter} from "@angular/core";
 @Component({
-  selector: "release-card", template: `<h3>{{release.name}}</h3>`
+  selector: "training-details", template: `<h3>{{training.name}}</h3>`
 })
-export class ReleaseCardComponent {
-  @Input() public release: Release;
+export class TrainingDetailsComponent {
+  @Input() public training: Training;
   // we use domain object as event, real world: ReleaseLikedEvent
-  @Output() public releaseLiked = new EventEmitter&lt;Release&gt;();
-  likeRelease() { this.releaseLiked.emit(this.release); }
+  @Output() public trainingLiked = new EventEmitter&lt;Training&gt;();
+  likeTraining() { this.trainingLiked.emit(this.training); }
 }
 </pre>
     <!--@formatter:on-->

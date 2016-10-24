@@ -17,12 +17,9 @@
 
     <!--@formatter:off-->
 <pre w11k-pretty-print lang="html">
-&lt;div class=&quot;releases&quot;&gt;
-  &lt;release-card *ngFor=&quot;let release of artist.releases&quot;
-               [release]=&quot;release&quot;
-               (releaseLiked)="onReleaseLiked($event, release)"&gt;
-  &lt;/release-card&gt;
-&lt;/div&gt;
+&lt;training-details [training]=&quot;training&quot;
+                  (trainingLiked)="onTrainingLiked($event)"&gt;
+&lt;/training-details&gt;
 </pre>
     <!--@formatter:on-->
   </div>

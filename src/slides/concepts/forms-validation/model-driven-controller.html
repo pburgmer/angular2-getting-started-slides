@@ -17,14 +17,14 @@
 <pre w11k-pretty-print lang="ts">
 import { FormGroup, FormControl } from "@angular/forms";
 @Component({ })
-export class ReleaseFormComponent implements OnInit {
+export class TrainingFormComponent implements OnInit {
   public form: FormGroup;
-  @Input() release: Release;
+  @Input() training: Training;
 
   ngOnInit() {
     this.form = new FormGroup({
-      name: new FormControl(this.release.name),
-      date: new FormControl(this.release.date)
+      name: new FormControl(this.training.name),
+      date: new FormControl(this.training.date)
     });
   }
 }

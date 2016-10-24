@@ -17,17 +17,17 @@
 
     <!--@formatter:off-->
     <pre w11k-pretty-print lang="ts">
-it('should get tracks',
-  async(inject([MockBackend, TrackService], (mockBackend, trackService) => {
+it('should get trainings',
+  async(inject([MockBackend, TrainingService], (mockBackend, trainingService) => {
     mockBackend.connections.subscribe((connection: MockConnection) => {
       connection.mockRespond(new Response(
-        new ResponseOptions({ body: [{ id: 0, name: "Sound of Silence" }]})
+        new ResponseOptions({ body: [{ id: 0, name: "Angular 2" }]})
       ));
     });
 
-    trackService.getTracks().subscribe(tracks => {
-      expect(tracks.length).toBe(1);
-      expect(tracks[0].id).toBe(0);
+    trainingService.getAll().subscribe(trainings => {
+      expect(trainings.length).toBe(1);
+      expect(trainings[0].id).toBe(0);
     });
   }))
 );
