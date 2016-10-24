@@ -1,0 +1,24 @@
+<div w11k-slide-master="regular" class="next-step">
+  <div w11k-slide-part-source="header">
+    Services
+  </div>
+
+  <div w11k-slide-part-source="content">
+    <ul class="simple">
+      <li>Services sollten in Angular 2 als Klassen implementiert werden</li>
+    </ul>
+
+
+    <!--@formatter:off-->
+<pre w11k-pretty-print lang="ts">
+import {Artist} from "./artist.model";
+
+export class ArtistService {
+  getAllArtists(): Observable&lt;Artist[]&gt; {
+    return Observable.from([]);
+  }
+}
+</pre>
+    <!--@formatter:on-->
+  </div>
+</div>

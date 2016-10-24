@@ -1,0 +1,29 @@
+<div w11k-slide-master="regular">
+  <div w11k-slide-part-source="header">
+    Komponenten mit Data-Binding
+  </div>
+
+  <div w11k-slide-part-source="content">
+    <!--@formatter:off-->
+<pre w11k-pretty-print lang="ts">
+import { Track } from "./../tracks/track.model";
+@Component({
+  selector: "music-app",
+  template: `
+    <h1>Music App</h1>
+    Music App has {{tracks.length}} tracks to play
+  `
+})
+export class MusicAppComponent {
+  public tracks: Track[];
+  constructor() {
+    this.tracks = [
+      new Track("Sound of Silence"), new Track("I Wish"),
+      new Track("Over My Shoulder"), new Track("Take Five")
+    ];
+  }
+}
+</pre>
+    <!--@formatter:on-->
+  </div>
+</div>

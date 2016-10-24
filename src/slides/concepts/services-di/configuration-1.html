@@ -1,0 +1,27 @@
+<div w11k-slide-master="regular">
+  <span w11k-slide-part-source="header">
+    Konfiguration
+  </span>
+
+  <div w11k-slide-part-source="content">
+    <ul class="simple">
+      <li>Woher weiß Angular was zu injezieren ist?
+        <ul>
+          <li>Muss konfiguriert werden: <i>Providers</i></li>
+          <li>Injector -&gt; Provider -&gt; Instance</li>
+        </ul>
+      </li>
+      <li>Konfiguration an Modulen
+            <!--@formatter:off-->
+<pre w11k-pretty-print lang="ts">
+@NgModule({
+  providers: [ ] /* array of providers */
+})
+export class TrackModule { }
+</pre>
+            <!--@formatter:on-->
+      </li>
+      <li>Wie sieht ein Provider aus?</li>
+    </ul>
+  </div>
+</div>

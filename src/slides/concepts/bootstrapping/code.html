@@ -1,0 +1,30 @@
+<div w11k-slide-master="regular">
+  <div w11k-slide-part-source="header">
+    Bootstrapping
+  </div>
+
+  <div w11k-slide-part-source="content">
+    <ul class="simple">
+      <li>Angular 2 Anwendung muss von Hand per Code gestartet werden
+        <ul>
+          <li>Kein manuelles <i>dom ready</i> Handling notwendig</li>
+        </ul>
+      </li>
+
+      <li>Code-Teil in <code>main.ts</code>
+        <ul>
+          <li>Angular 2 stellt <code>bootstrapModule</code> Funktion bereit</li>
+          <li>Parameter: Haupt-Modul der Anwendung</li>
+        </ul>
+        <!--@formatter:off-->
+<pre w11k-pretty-print lang="ts">
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { AppModule } from './app/app.module';
+
+platformBrowserDynamic().bootstrapModule(AppModule);
+</pre>
+    <!--@formatter:on-->
+      </li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,42 @@
+<div w11k-slide-master="regular">
+  <span w11k-slide-part-source="header">
+    Hierarchische Injektoren
+  </span>
+
+  <div w11k-slide-part-source="content">
+    <ul class="simple">
+      <li>Injektoren bilden einen Baum
+        <ul>
+          <li>Jede Komponente ein Child-Injector vom Injector der Vater-Komponente</li>
+          <li>Instanzen sind Singletons in einem Injektor</li>
+        </ul>
+      </li>
+      <li>Provider für Child-Injektoren können an Komponenten definiert werden
+        <ul>
+          <li>Child-Injector kann Provider des Vaters überschreiben / ergänzen</li>
+          <li><code>providers</code> Property in <code>@Component</code> Decorator</li>
+        </ul>
+      </li>
+      <li>Einsatzmöglichkeiten
+        <ul>
+          <li>Auslösen von Namendskonflikten</li>
+          <li>Unterschiedliche Konfiguration (z.B. Log-Level)</li>
+        </ul>
+      </li>
+    </ul>
+
+    <!--@formatter:off-->
+<pre w11k-pretty-print lang="ts">
+@Component({ providers: [ provide(Logger, { useClass: ConsoleLogger }) ]})
+export class MusicAppComponent {
+  constructor(private logger: Logger) { logger.level = 'warn'; }
+}
+
+@Component({ providers: [ provide(Logger, { useClass: ConsoleLogger }) ]})
+export class ReleaseDetailsComponent {
+  constructor(private logger: Logger) { logger.level = 'debug'; }
+}
+</pre>
+    <!--@formatter:on-->
+  </div>
+</div>

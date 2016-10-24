@@ -1,0 +1,32 @@
+<div w11k-slide-master="regular">
+  <div w11k-slide-part-source="header">
+    Komponenten schreiben
+  </div>
+
+  <div w11k-slide-part-source="content">
+    <ul class="simple">
+      <li>Komponenten werden im TypeScript Code definiert
+        <ul>
+          <li>Annotierte Klasse</li>
+          <li>Klasse: Logik & Daten</li>
+          <li>Annotation: Meta-Daten</li>
+        </ul>
+      </li>
+    </ul>
+
+    <!--@formatter:off-->
+<pre w11k-pretty-print lang="ts">
+import { Component } from "@angular/core";
+
+@Component({
+  // css selector to find the component's usage
+  selector: "music-app",
+  template: `
+    &lt;h1&gt;Music App&lt;/h1&gt;
+  `
+})
+export class MusicAppComponent {}
+</pre>
+    <!--@formatter:on-->
+  </div>
+</div>

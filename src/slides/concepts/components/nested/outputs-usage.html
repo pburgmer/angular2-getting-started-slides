@@ -1,0 +1,29 @@
+<div w11k-slide-master="regular">
+  <div w11k-slide-part-source="header">
+    Komponenten Outputs
+  </div>
+
+  <div w11k-slide-part-source="content">
+    <ul class="simple">
+      <li>Mechanismus für UI spezifische Events
+        <ul>
+          <li>Benutzerinteraktion weiter geben</li>
+          <li>Domain-Aktionen triggern</li>
+          <li>Best Practice: Keine Business Logik in Componenten</li>
+        </ul>
+      </li>
+    </ul>
+
+
+    <!--@formatter:off-->
+<pre w11k-pretty-print lang="html">
+&lt;div class=&quot;releases&quot;&gt;
+  &lt;release-card *ngFor=&quot;let release of artist.releases&quot;
+               [release]=&quot;release&quot;
+               (releaseLiked)="onReleaseLiked($event, release)"&gt;
+  &lt;/release-card&gt;
+&lt;/div&gt;
+</pre>
+    <!--@formatter:on-->
+  </div>
+</div>

@@ -1,0 +1,30 @@
+<div w11k-slide-master="regular">
+  <div w11k-slide-part-source="header">
+    Komponenten Inputs
+  </div>
+
+  <div w11k-slide-part-source="content">
+
+    <!--@formatter:off-->
+<pre w11k-pretty-print lang="html">
+&lt;release-card [release]=&quot;artist.firstRelease&quot;&gt;&lt;/release-card&gt;
+</pre>
+    <!--@formatter:on-->
+    <ul class="simple">
+      <li>Daten können an Komponente übergeben werden
+        <ul>
+          <li><i>Property Binding</i> über <code>[propertyName]="expression"</code></li>
+          <li><code>[propertyName]</code> Property in der "inneren" Komponente <i>release-card</i></li>
+          <li><code>expression</code> Property in der "äußeren / aufrufenden" Komponente</li>
+        </ul>
+      </li>
+      <li>Data-Binding in Angular 2 immer unidirektional
+        <ul>
+          <li>Objekt veränderbar</li>
+          <li>Referenz bleibt außen immer gleich</li>
+        </ul>
+      </li>
+    </ul>
+
+  </div>
+</div>

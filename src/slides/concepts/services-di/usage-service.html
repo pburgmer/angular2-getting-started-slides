@@ -1,0 +1,32 @@
+<div w11k-slide-master="regular">
+  <span w11k-slide-part-source="header">
+    Dependency Injection
+  </span>
+
+  <div w11k-slide-part-source="content">
+    <ul class="simple">
+      <li>Verwendung bei Services
+        <ul>
+          <li>Injektion als Konstruktor-Parameter</li>
+          <li>Service mit <code>@Injectable()</code> markieren
+            <ul>
+              <li>Heißt nicht, dass Service injezierbar</li>
+              <li>Heißt, dass Konstruktor Parameter injeziert werden sollen</li>
+              <li>Irreführender Name, in Java <code>@Inject</code> an Konstruktor</li>
+            </ul>
+          </li>
+        </ul>
+
+        <!--@formatter:off-->
+<pre w11k-pretty-print lang="ts">
+@Injectable()
+export class ConsoleLogger extends Logger {
+  constructor(private console: Console) {}
+  debug() { this.console.debug("I do!"); }
+}
+</pre>
+        <!--@formatter:on-->
+      </li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+<div w11k-slide-master="regular">
+  <span w11k-slide-part-source="header">
+    Dependency Injection
+  </span>
+
+  <div w11k-slide-part-source="content">
+    <ul class="simple">
+      <li>Verwendung bei Komponenten
+        <ul>
+          <li>Injektion als Konstruktor-Parameter</li>
+          <li>Kein <code>@Injectable()</code> notwendig, da <code>@Component</code> verwendet</li>
+        </ul>
+
+        <!--@formatter:off-->
+<pre w11k-pretty-print lang="ts">
+@Component({ selector: "release-card" })
+export class ReleaseCardComponent {
+  constructor(private log: Logger) {}
+  likeRelease() { this.log.debug(`Release ${this.release.name} liked`); }
+}
+</pre>
+        <!--@formatter:on-->
+      </li>
+    </ul>
+  </div>
+</div>

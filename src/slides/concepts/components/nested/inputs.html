@@ -1,0 +1,32 @@
+<div w11k-slide-master="regular">
+  <div w11k-slide-part-source="header">
+    Komponenten Inputs
+  </div>
+
+  <div w11k-slide-part-source="content">
+    <ul class="simple">
+      <li>Komponenten können Daten von außen entgegennehmen
+        <ul>
+          <li>Eigenschaft in Klasse, in der die Daten gespeichert werden</li>
+          <li>Eigenschaft wird mit <code>@Input()</code> markiert</li>
+          <li>Wert kann in Template verwendet werden</li>
+        </ul>
+      </li>
+    </ul>
+
+
+    <!--@formatter:off-->
+<pre w11k-pretty-print lang="ts">
+import {Component, Input} from "@angular/core";
+
+@Component({
+  selector: "release-card",
+  template: `<h3>{{release.name}}</h3>`
+})
+export class ReleaseCardComponent {
+  @Input() public release: Release;
+}
+</pre>
+    <!--@formatter:on-->
+  </div>
+</div>

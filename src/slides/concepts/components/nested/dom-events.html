@@ -1,0 +1,30 @@
+<div w11k-slide-master="regular">
+  <div w11k-slide-part-source="header">
+    Event Bindings
+  </div>
+
+  <div w11k-slide-part-source="content">
+    <ul class="simple">
+      <li>Event Bindings werden auch für DOM-Events verwendet
+        <ul>
+          <li>DOM-Element wirft Event (Browser)</li>
+          <li>Statement wird ausgeführt</li>
+        </ul>
+      </li>
+      <li>Keine extra Direktive notwendig
+        <ul>
+          <li>Vereinheitlichte Template-Sprache</li>
+        </ul>
+      </li>
+    </ul>
+
+
+    <!--@formatter:off-->
+<pre w11k-pretty-print lang="html">
+&lt;div class=&quot;star&quot; (click)=&quot;likeRelease($event, release)&quot;&gt;
+  &lt;img src=&quot;favorite-star.png&quot;&gt;
+&lt;/div&gt;
+</pre>
+    <!--@formatter:on-->
+  </div>
+</div>

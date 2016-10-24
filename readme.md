@@ -27,23 +27,6 @@ npm run dist
 # Notizen
 
 * Konzepte
-  * Komponenten
-    * Grundlagen
-    * Data-Binding
-    * Inputs, Outputs, Events, Property-Bindings, Class- & Style-Bindings
-    * Style Encapsulation
-    * Smart vs Dump
-  * Module
-    * Gleicher Fehler noch mal?
-    * ES6 vs NG
-    * NgModule Aufbau (Echte Kapselung)
-  * Services + DI
-    * Service: Grundsätzliches Konzept
-    * DI: Grundsätzliches Konzept
-    * Provider an Modulen
-    * Hierarchischer Injektor
-    * Http als Beispiel
-      * Observable statt Promise
   * Routing
     * verwendet RX
   * Formulare & Validierung

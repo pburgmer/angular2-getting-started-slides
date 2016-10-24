@@ -1,0 +1,33 @@
+<div w11k-slide-master="regular">
+  <div w11k-slide-part-source="header">
+    Module
+  </div>
+
+  <div w11k-slide-part-source="content">
+    <ul class="simple">
+      <li>Ein Modul ist eine annotierte Klasse       
+        <ul>
+          <li>Klasse für gewöhnlich leer, nur Träger der Annotation</li>
+          <li>Annotation enthält Informationen (Referenzen auf andere Module & Klassen)</li>
+        </ul>
+      </li>
+      <li>Angular-Module bestehen u.a. aus
+        <ul>
+          <li>Imports: Welche anderen Module werden intern verwendet</li>
+          <li>Declarations: Was intern bekannt ist (quasi lokale Variablen)</li>
+          <li>Exports: Was wird nach außen bekannt gemacht (für andere Imports)</li>
+        </ul>
+      </li>
+    </ul>
+    <!--@formatter:off-->
+<pre w11k-pretty-print lang="ts">
+@NgModule({
+  declarations: [ AppComponent ],
+  imports: [ BrowserModule, FormsModule, HttpModule ],
+  exports: [ AppComponent ]
+})
+export class AppModule { }
+</pre>
+    <!--@formatter:on-->
+  </div>
+</div>

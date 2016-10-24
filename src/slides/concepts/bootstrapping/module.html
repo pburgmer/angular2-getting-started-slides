@@ -1,0 +1,23 @@
+<div w11k-slide-master="regular">
+  <div w11k-slide-part-source="header">
+    Bootstrapping
+  </div>
+
+  <div w11k-slide-part-source="content">
+    <ul class="simple">
+      <li>Muss an Modul per <code>bootstrap</code> angegeben werden!</li>
+        <!--@formatter:off-->
+<pre w11k-pretty-print lang="ts">
+@NgModule({
+  declarations: [ AppComponent ],
+  imports: [ BrowserModule, FormsModule, HttpModule ],
+  exports: [ AppComponent ],
+  bootstrap: [ AppComponent ]
+})
+export class AppModule { }
+</pre>
+    <!--@formatter:on-->
+      </li>
+    </ul>
+  </div>
+</div>

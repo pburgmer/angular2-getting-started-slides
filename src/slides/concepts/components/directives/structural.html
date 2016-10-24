@@ -1,0 +1,37 @@
+<div w11k-slide-master="regular">
+  <div w11k-slide-part-source="header">
+    Strukturelle Direktiven
+  </div>
+
+  <div w11k-slide-part-source="content">
+    <ul class="simple">
+      <li>Verändern DOM Struktur
+        <ul>
+          <li>Kein eigenes Template</li>
+          <li>Kriegen Template übergeben</li>
+        </ul>
+      </li>
+      <li>Haben ein <code>*</code> als Prefix</li>
+    </ul>
+
+    <!--@formatter:off-->
+<pre w11k-pretty-print lang="html">
+&lt;ul&gt;
+  &lt;li *ngFor=&quot;let track of tracks&quot;&gt;
+    {{track.name}}
+  &lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+    <!--@formatter:on-->
+
+    <ul class="as-headlines">
+      <li>Strukturelle Direktiven in Angular 2 Common
+        <ul>
+          <li><code>ngFor</code></li>
+          <li><code>ngIf</code></li>
+          <li><code>ngSwitch</code></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>

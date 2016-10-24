@@ -1,0 +1,37 @@
+<div w11k-slide-master="regular">
+  <span w11k-slide-part-source="header">
+    Konfiguration
+  </span>
+
+  <div w11k-slide-part-source="content">
+    <ul class="simple">
+      <li>Shortcut
+        <ul>
+          <li>einfach nur die Klasse angeben: [ConsoleLogger]</li>
+          <li>Shortcut für <code>[{ provide: ConsoleLogger, useClass: ConsoleLogger}]</code></li>
+        </ul>
+      </li>
+      <li>Allgemein: Provider-Objekt
+        <ul>
+          <li>provide: Unter welchem Namen steht es zur Verfügung -&gt; Klasse</li>
+          <li>Ein Rezept, wie soll es erzeugt werden soll -&gt;<br>
+            <code>useClass</code>, <code>useValue</code>, <code>useFactory</code> oder <code>useExisting</code>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <!--@formatter:off-->
+<pre w11k-pretty-print lang="ts">
+@NgModule({
+  providers: [
+    { provide: ConsoleLogger, useClass: ConsoleLogger }, // same as shortcut
+    { provide: Logger, useExisting: ConsoleLogger } // different token, same instance
+  ]
+})
+export class TrackModule { }
+</pre>
+    <!--@formatter:on-->
+
+  </div>
+</div>
