@@ -6,13 +6,13 @@
   <div w11k-slide-part-source="content">
     <!--@formatter:off-->
 <pre w11k-pretty-print lang="ts">
-it('should render the release name', async(() => {
+it('should render the training name', async(() => {
   let fixture = TestBed.createComponent(TrainingDetailsComponent);
 
   let component = fixture.componentInstance;
   let element = fixture.nativeElement;
 
-  component.release = { name: 'Angular 2' };
+  component.training = { name: 'Angular 2' };
   fixture.detectChanges();
 
   expect(element.querySelector('h3').innerText).toBe('Angular 2');
